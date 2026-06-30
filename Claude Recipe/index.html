@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recipe Finder</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <button id="favorites-btn" class="favorites-btn" aria-label="View my favorites">
+      ♥ My Favorites <span id="favorites-count">(0)</span>
+    </button>
+    <h1>🍳 Kelby's Kitchen Recipe Finder</h1>
+    <p>Search for recipes by name, ingredient, or origin.</p>
+  </header>
+
+  <main>
+    <!-- Search controls -->
+    <section class="controls">
+      <input id="search-input" type="text" placeholder="Try 'pasta' or 'chicken'..." />
+      <button id="search-btn">Search</button>
+      <button id="surprise-btn">Surprise me</button>
+    </section>
+
+    <!-- Saved favorites. Hidden until the user opens "My Favorites". -->
+    <section id="favorites" class="favorites" hidden>
+      <h2>My Favorites</h2>
+      <div id="favorites-grid" class="results"></div>
+    </section>
+
+    <!-- Suggestions appear here after the first search. Hidden until then. -->
+    <section id="suggestions" class="suggestions" hidden>
+      <h2 id="suggestions-title">Suggested for you</h2>
+      <div id="suggestions-grid" class="results"></div>
+    </section>
+
+    <!-- Search results will be injected here by JavaScript -->
+    <section id="results" class="results"></section>
+  </main>
+
+  <!-- The full-recipe panel. Starts hidden; JS reveals it when a card is clicked.
+       It can be docked (right), fullscreen, or minimized to a tab below. -->
+  <aside id="recipe-panel" class="recipe-panel" hidden>
+    <div class="panel-toolbar">
+      <button id="panel-fullscreen" title="Toggle full screen">⤢</button>
+      <button id="panel-minimize" title="Minimize">—</button>
+      <button id="panel-close" title="Close">✕</button>
+    </div>
+    <div id="panel-content" class="panel-content"></div>
+  </aside>
+
+  <!-- Minimized recipes live here as tabs (LinkedIn-style), max 5. -->
+  <div id="min-tray" class="min-tray"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
