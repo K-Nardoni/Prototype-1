@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Airbnb for Teams · Intake</title>
+
+  <!-- Self-hosted Inter + app styles -->
+  <link rel="stylesheet" href="css/fonts.css" />
+  <link rel="stylesheet" href="css/app.css" />
+
+  <!-- Vendored libraries (exact versions from the original bundle; run offline) -->
+  <script src="vendor/lucide.js"></script>
+  <script src="vendor/react.development.js"></script>
+  <script src="vendor/react-dom.development.js"></script>
+  <script src="vendor/babel.standalone.js"></script>
+</head>
+<body>
+  <div id="root"></div>
+
+  <!-- Image registry, must load before the app source that reads window.__resources -->
+  <script src="resources.js"></script>
+
+  <!-- App source (JSX, transformed in-browser by Babel). Order matters:
+       shared components are defined first; intake.jsx mounts the app. -->
+  <script type="text/babel" src="src/ios-device.jsx"></script>
+  <script type="text/babel" src="src/tweaks-panel.jsx"></script>
+  <script type="text/babel" src="src/intake.jsx"></script>
+  <script type="text/babel" src="src/results.jsx"></script>
+</body>
+</html>
