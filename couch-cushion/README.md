@@ -69,9 +69,8 @@ screenshots/              Process captures from design iteration
 
 ## If this shipped
 
-```
 Success would be measured by cushion-creation rate, goal-completion rate, and D30 retention lift — with guardrails ensuring Couch Cushion never allocates below a user's genuine safe-to-spend threshold. The core design challenge is trust: making an AI assistant dependable enough that people will let it move their money.
-```
+
 ---
 
 ## Author
