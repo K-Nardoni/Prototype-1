@@ -75,4 +75,4 @@ vendor/             React 18.3.1, ReactDOM, Babel standalone, Lucide
 
 ## Author
 
-Kelby Nardoni — MBA candidate, aspiring product manager
+Kelby Nardoni — MBA, 9+ years in enterprise AI product.
