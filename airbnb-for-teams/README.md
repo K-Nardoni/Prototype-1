@@ -12,7 +12,7 @@ Small business founders and team leads spend weeks manually researching venues f
 
 This prototype demonstrates the core mobile intake and results experience described in the [Product Requirements Document](PRD.md).
 
-**Target user:** Matt, founder of The Feed — a wellness company with a team of up to 300. He wants to book a meaningful annual retreat that reflects his company's culture. Today there's no platform built for him.
+**Target user:** Matt, founder of The Feed — a wellness company with a team of up to 300. He wants to book a meaningful annual retreat that reflects his company's culture. Today there's no platform built for him or companies like his.
 
 ---
 
