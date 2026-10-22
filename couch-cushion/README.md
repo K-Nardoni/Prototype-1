@@ -2,6 +2,8 @@
 
 An AI-powered micro-savings feature concept for a consumer banking app — built for everyday Americans living paycheck to paycheck who want to save but can't get started.
 
+This prototype explores a core question in consumer AI: how do you make an AI financial assistant trustworthy enough that people will let it move their money?
+
 **[View the live prototype →](https://k-nardoni.github.io/Prototypes/couch-cushion/)**
 
 ---
@@ -65,6 +67,13 @@ screenshots/              Process captures from design iteration
 
 ---
 
+## Measuring
+
+```
+If built: success would be measured by cushion-creation rate, goal-completion rate, and retention lift , with guardrails on ensuring users never over-allocate below their safe-to-spend threshold.
+```
+---
+
 ## Author
 
-Kelby Nardoni — MBA, 9+ years building enterprise AI products for consumers and businesses.
+Kelby Nardoni, AI Product Manager with 9+ years building enterprise and consumer GenAI products in regulated financial services. Led AI products from 6-person teams to 25M+ users.
