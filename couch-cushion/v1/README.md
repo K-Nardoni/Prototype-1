@@ -20,7 +20,7 @@ See the full product thinking in the [Product Requirements Document](PRD.md).
 
 The prototype demonstrates the core decision flow:
 
-- **Safe-to-spend header** — Jade surfaces the amount that's genuinely safe to move after scanning bills, recurring charges, and spending patterns
+- **Safe-to-spend header** — the AI assistant surfaces the amount that's genuinely safe to move after scanning bills, recurring charges, and spending patterns
 - **Three-option cards** — Keep in checking / Stuff a cushion (4.1% APY) / Invest it (~6.9%)
 - **Live projections** — 6-month and 1-year growth shown on each option before confirming
 - **Named cushion input** — Rebecca names her goal ("graduation trip", "rainy day fund") to make it personal

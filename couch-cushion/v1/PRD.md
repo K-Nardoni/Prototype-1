@@ -1,10 +1,10 @@
 # PRD: Couch Cushion
-## AI-Powered Micro-Savings for Chime Members
+## AI-Powered Micro-Savings for Everyday Banking App Users
 
 **Author:** Kelby  
 **Date:** May 2026  
 **Status:** Concept  
-**Product Area:** AI Experiences / Jade Intelligence Layer
+**Product Area:** AI Experiences / Intelligence Layer
 
 ---
 
@@ -49,16 +49,16 @@ Traditional advice — "skip the latte," "save your spare change," "open a high 
 
 ## Product Overview
 
-Couch Cushion is an AI-powered micro-savings feature embedded natively within the Chime app. It leverages Jade's existing transaction intelligence to identify safe-to-spend amounts and give members a simple, empowering choice: keep it in checking, stuff it into a named HYSA cushion, or invest it.
+Couch Cushion is an AI-powered micro-savings feature embedded natively within a consumer banking app. It leverages the app's existing transaction intelligence to identify safe-to-spend amounts and give users a simple, empowering choice: keep it in checking, stuff it into a named HYSA cushion, or invest it.
 
-It requires no new account, no minimum balance, and no cognitive overhead. It meets Rebecca where she already is — inside Chime — and turns everyday financial data into proactive, actionable guidance.
+It requires no new account, no minimum balance, and no cognitive overhead. It meets Rebecca where she already is — inside her banking app — and turns everyday financial data into proactive, actionable guidance.
 
 ---
 
 ## Core Features
 
 ### Feature 1: Safe to Spend Intelligence
-Jade analyzes Rebecca's account in real time — scanning upcoming bills, recurring charges, spending patterns, and income timing — to calculate how much is genuinely safe to move without impacting her daily life.
+The AI assistant analyzes Rebecca's account in real time — scanning upcoming bills, recurring charges, spending patterns, and income timing — to calculate how much is genuinely safe to move without impacting her daily life.
 
 This is not her balance. It is her true discretionary amount, surfaced at the right moment with the right context.
 
@@ -79,40 +79,40 @@ Rebecca names her cushion — "graduation trip," "rainy day fund," "new laptop" 
 ### Feature 4: Time-Bound Milestones
 Rebecca sets a deadline — "save $500 by May 2027" — and Couch Cushion automatically breaks it into monthly chunks. A $500 goal becomes a $42/month goal. Progress feels achievable because it is.
 
-### Feature 5: Proactive Jade Nudges
-Jade monitors Rebecca's spending patterns and surfaces contribution opportunities when conditions are right — when she spent less than usual, when a paycheck cleared, when she's ahead of her budget. Rebecca chooses her comfort level:
+### Feature 5: Proactive AI Nudges
+The assistant monitors Rebecca's spending patterns and surfaces contribution opportunities when conditions are right — when she spent less than usual, when a paycheck cleared, when she's ahead of her budget. Rebecca chooses her comfort level:
 
 - Minimum — spare change, barely noticeable
 - Medium — modest but meaningful
 - Comfortable — steady progress toward goal
 - Aggressive — maximum push
 
-Jade never moves money without Rebecca's explicit consent. Transparency and control are non-negotiable.
+The assistant never moves money without Rebecca's explicit consent. Transparency and control are non-negotiable.
 
 ---
 
 ## Disclosure
 
-Jade will never move money without your consent. Once funds are invested, standard taxes and fees may apply to move invested funds back into your account.
+The assistant will never move money without your consent. Once funds are invested, standard taxes and fees may apply to move invested funds back into your account.
 
 ---
 
 ## Strategic Fit
 
-**Connects to existing Chime infrastructure:**
-- HYSA already exists in Chime's product suite
-- SpotMe already performs safe-to-spend logic
-- Jade already has the transaction data
+**Connects to existing banking app infrastructure:**
+- HYSA already exists in the product suite
+- An existing overdraft-protection feature already performs safe-to-spend logic
+- The AI assistant already has the transaction data
 
 Couch Cushion is not new infrastructure. It is AI connecting existing dots to create a proactive, personalized savings experience.
 
-**Addresses core member motivations (from Chime member data):**
-- 35% of members join Chime specifically to build their savings
+**Addresses core user motivations (from internal user research):**
+- 35% of users join specifically to build their savings
 - 44% join to access more money — Couch Cushion's safe-to-spend logic directly addresses this anxiety
 - Serves the underbanked user who traditional savings products have failed
 
-**Advances the next generation Jade vision:**
-Couch Cushion moves Jade from reactive support to proactive financial partnership — from answering questions to anticipating needs and taking action on Rebecca's behalf, with her consent.
+**Advances the next generation AI assistant vision:**
+Couch Cushion moves the assistant from reactive support to proactive financial partnership — from answering questions to anticipating needs and taking action on Rebecca's behalf, with her consent.
 
 ---
 
@@ -134,7 +134,7 @@ Rebecca hits her goal by her deadline and creates another one.
 
 ## What Success Looks Like for Rebecca
 
-She opens Chime one Tuesday morning and sees a Jade notification: *"You spent $23 less on food this week. Want to add some to your graduation trip?"* She taps "add $10," watches her progress bar move, and closes the app. She didn't think about saving. She just did it.
+She opens the app one Tuesday morning and sees a notification: *"You spent $23 less on food this week. Want to add some to your graduation trip?"* She taps "add $10," watches her progress bar move, and closes the app. She didn't think about saving. She just did it.
 
 Six months later she books the trip.
 
@@ -148,4 +148,4 @@ An interactive prototype of the Couch Cushion safe-to-spend decision flow — in
 
 ---
 
-*Couch Cushion · Chime concept · May 2026*
+*Couch Cushion · Fintech concept · May 2026*
