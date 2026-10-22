@@ -1,0 +1,220 @@
+/* =========================================================
+   KN Design System — Foundations
+   Type + color tokens. Import this file once at the root.
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  /* ---------- FONT FAMILIES ---------- */
+  --font-sans: "DM Sans", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  /* ---------- COLOR — INK & NEUTRALS ---------- */
+  --ink-1: #0F1A15;    /* primary text */
+  --ink-2: #1F2E27;    /* headings on cream */
+  --mute-1: #587066;   /* secondary text */
+  --mute-2: #8AA29A;   /* tertiary / placeholder */
+  --line-1: #D6E2DC;   /* borders on cream */
+  --line-2: #E4ECE7;   /* subtle dividers */
+
+  /* ---------- COLOR — SURFACES ---------- */
+  --surface-0: #E5F3EA;  /* warm cream — the base canvas */
+  --surface-1: #FFFFFF;  /* cards */
+  --surface-2: #D5E7DB;  /* sunken / inset */
+  --surface-ink: #0F1A15;/* dark surfaces (for contrast moments) */
+
+  /* ---------- COLOR — PRIMARY (Indigo) ---------- */
+  /* Trust, depth — the brand workhorse. */
+  --primary-50:  #E6FBF2;
+  --primary-100: #C7F4DD;
+  --primary-300: #6FE0A8;
+  --primary-500: #0FCC7A;  /* base */
+  --primary-600: #08A861;  /* pressed */
+  --primary-700: #036E40;  /* deep */
+
+  /* ---------- COLOR — ACCENT (Acid Lime) ---------- */
+  /* Reserved for AI moments / magic / energy. Use sparingly. */
+  --accent-50:  #CCFBF1;
+  --accent-300: #5EEAD4;
+  --accent-500: #2DD4BF;   /* base */
+  --accent-700: #0D9488;
+
+  /* ---------- COLOR — WARMTH (Coral) ---------- */
+  /* Highlights, illustration accents. */
+  --coral-300: #FFB3A8;
+  --coral-500: #FF7A6B;
+  --coral-700: #D9483A;
+
+  /* ---------- COLOR — SEMANTIC ---------- */
+  --money-in:  #1FB87C;    /* deposits, gains */
+  --money-in-soft: #DFF6EC;
+  --money-out: #0F1A15;    /* spending uses ink, not red — banks aren't scolds */
+  --warning:   #FFB547;
+  --warning-soft: #FFF1D6;
+  --danger:    #E33B3B;
+  --danger-soft: #FCE4E4;
+
+  /* ---------- RADII ---------- */
+  --radius-xs: 6px;
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-2xl: 36px;
+  --radius-pill: 999px;
+
+  /* ---------- SPACING (4px base) ---------- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+
+  /* ---------- SHADOWS ---------- */
+  /* Low elevations stay neutral-ink. Higher elevations gain a subtle
+     green tint so the system reads "green throughout." AI moments use
+     a real two-stop gradient glow: emerald → jade. */
+  --shadow-sm: 0 1px 2px rgba(15, 26, 21, 0.06), 0 1px 1px rgba(15, 26, 21, 0.04);
+  --shadow-md: 0 4px 12px -2px rgba(15, 26, 21, 0.09), 0 2px 4px -1px rgba(15, 26, 21, 0.04);
+  --shadow-lg: 0 12px 32px -8px rgba(8, 168, 97, 0.16), 0 4px 8px -2px rgba(15, 26, 21, 0.06);
+  --shadow-xl: 0 24px 48px -12px rgba(8, 168, 97, 0.22), 0 8px 16px -4px rgba(15, 26, 21, 0.08);
+  --shadow-glow-primary: 0 8px 24px -4px rgba(15, 204, 122, 0.40);
+  --shadow-glow-accent:  0 10px 28px -6px rgba(15, 204, 122, 0.45), 0 4px 12px -2px rgba(45, 212, 191, 0.35);
+
+  /* ---------- TYPE SCALE ---------- */
+  /* Sizes are unitless ratios; combine with --font-sans. */
+  --text-2xs: 11px;
+  --text-xs:  12px;
+  --text-sm:  14px;
+  --text-md:  16px;
+  --text-lg:  18px;
+  --text-xl:  22px;
+  --text-2xl: 28px;
+  --text-3xl: 36px;
+  --text-4xl: 48px;
+  --text-5xl: 64px;
+  --text-6xl: 84px;
+
+  /* ---------- MOTION ---------- */
+  --ease-standard: cubic-bezier(0.32, 0.72, 0, 1);   /* iOS-leaning */
+  --ease-emphasis: cubic-bezier(0.2, 0.9, 0.1, 1);   /* slight overshoot energy */
+  --dur-fast: 120ms;
+  --dur-base: 220ms;
+  --dur-slow: 360ms;
+}
+
+/* =========================================================
+   SEMANTIC ELEMENT STYLES
+   Use these classes (or apply via base reset) rather than
+   styling tags ad-hoc. They snap to the system.
+   ========================================================= */
+
+.kn-body {
+  font-family: var(--font-sans);
+  font-size: var(--text-md);
+  line-height: 1.5;
+  color: var(--ink-1);
+  background: var(--surface-0);
+  font-feature-settings: "ss01", "cv01";
+  -webkit-font-smoothing: antialiased;
+}
+
+/* --- Display & Headings --- */
+.kn-display {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: var(--text-6xl);
+  letter-spacing: -0.035em;
+  line-height: 0.95;
+  color: var(--ink-1);
+}
+.kn-h1 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: var(--text-4xl);
+  letter-spacing: -0.028em;
+  line-height: 1.05;
+  color: var(--ink-1);
+}
+.kn-h2 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: var(--text-3xl);
+  letter-spacing: -0.022em;
+  line-height: 1.1;
+  color: var(--ink-1);
+}
+.kn-h3 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: var(--text-2xl);
+  letter-spacing: -0.018em;
+  line-height: 1.2;
+  color: var(--ink-1);
+}
+.kn-h4 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: var(--text-xl);
+  letter-spacing: -0.012em;
+  line-height: 1.25;
+  color: var(--ink-1);
+}
+
+/* --- Body --- */
+.kn-p {
+  font-family: var(--font-sans);
+  font-size: var(--text-md);
+  line-height: 1.55;
+  color: var(--ink-1);
+}
+.kn-p-sm { font-size: var(--text-sm); line-height: 1.5; color: var(--ink-1); }
+.kn-p-lg { font-size: var(--text-lg); line-height: 1.5; color: var(--ink-1); }
+
+/* --- Eyebrow / label / caption --- */
+.kn-eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--mute-1);
+}
+.kn-label {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--ink-1);
+}
+.kn-caption {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  color: var(--mute-1);
+}
+
+/* --- Numeric / tabular --- */
+.kn-numeric {
+  font-family: var(--font-sans);
+  font-feature-settings: "tnum", "ss01";
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.01em;
+}
+.kn-mono {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--ink-1);
+}
+
+/* --- Utility text colors --- */
+.kn-text-mute  { color: var(--mute-1); }
+.kn-text-mute2 { color: var(--mute-2); }
+.kn-text-primary { color: var(--primary-500); }
+.kn-text-money-in { color: var(--money-in); }
+.kn-text-danger { color: var(--danger); }

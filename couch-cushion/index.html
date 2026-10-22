@@ -1,236 +1,84 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Couch Cushion · Month-end allocation</title>
+<link rel="stylesheet" href="colors_and_type.css" />
 <style>
-  * { box-sizing: border-box; }
-  .phone { background: var(--color-background-secondary); border-radius: 32px; border: 0.5px solid var(--color-border-secondary); padding: 14px; max-width: 340px; margin: 0 auto; }
-  .screen { background: var(--color-background-primary); border-radius: 22px; overflow: hidden; border: 0.5px solid var(--color-border-tertiary); }
-  .hdr { background: #1B4F3A; padding: 18px 16px 0; position: relative; overflow: hidden; min-height: 140px; }
-  .hdr-text { position: relative; z-index: 2; }
-  .hdr-row { display: flex; justify-content: space-between; align-items: center; }
-  .hdr-name { font-size: 12px; color: rgba(255,255,255,0.75); }
-  .hdr-bal { font-size: 26px; font-weight: 500; color: white; margin: 4px 0 2px; }
-  .hdr-sub { font-size: 11px; color: rgba(255,255,255,0.65); padding-bottom: 10px; }
-  .couch-wrap { position: absolute; bottom: 0; right: 0; left: 0; z-index: 1; }
-  .jade-banner { background: #EAF3DE; border-bottom: 0.5px solid #C0DD97; padding: 12px 16px; display: flex; gap: 10px; align-items: flex-start; }
-  .jade-icon { color: #3B6D11; font-size: 18px; margin-top: 1px; }
-  .jade-msg { font-size: 12px; color: #27500A; line-height: 1.4; }
-  .jade-amt { font-size: 18px; font-weight: 500; color: #1B4F3A; margin: 2px 0; }
-  .body { padding: 14px 16px; }
-  .section-label { font-size: 11px; color: var(--color-text-secondary); font-weight: 500; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; }
-  .option-card { border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 12px 14px; margin-bottom: 10px; cursor: pointer; background: var(--color-background-primary); }
-  .option-card.selected { border: 2px solid #1B4F3A; }
-  .option-header { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
-  .option-icon { font-size: 20px; color: #1B4F3A; }
-  .option-title { font-size: 14px; font-weight: 500; color: var(--color-text-primary); }
-  .option-badge { font-size: 10px; padding: 2px 8px; border-radius: 10px; margin-left: auto; }
-  .badge-gray { background: var(--color-background-secondary); color: var(--color-text-secondary); }
-  .badge-green { background: #EAF3DE; color: #27500A; }
-  .badge-blue { background: #E6F1FB; color: #0C447C; }
-  .proj-row { display: flex; gap: 8px; }
-  .proj-box { flex: 1; background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 8px; text-align: center; }
-  .proj-label { font-size: 10px; color: var(--color-text-secondary); margin-bottom: 3px; }
-  .proj-val { font-size: 14px; font-weight: 500; color: var(--color-text-primary); }
-  .proj-gain { font-size: 10px; color: #3B6D11; margin-top: 1px; }
-  .cushion-input-row { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
-  .cushion-input-row label { font-size: 12px; color: var(--color-text-secondary); white-space: nowrap; }
-  .cushion-input-row input[type=text] { flex: 1; font-size: 13px; padding: 6px 10px; border-radius: var(--border-radius-md); border: 0.5px solid var(--color-border-secondary); background: var(--color-background-primary); color: var(--color-text-primary); }
-  .amount-slider { width: 100%; margin: 8px 0 4px; }
-  .slider-row { display: flex; justify-content: space-between; font-size: 11px; color: var(--color-text-secondary); margin-bottom: 10px; }
-  .confirm-btn { width: 100%; padding: 13px; border-radius: var(--border-radius-lg); background: #534AB7; color: white; border: none; font-size: 14px; font-weight: 500; cursor: pointer; margin-top: 4px; }
-  .confirm-btn:active { opacity: 0.85; }
-  .disclaimer { font-size: 10px; color: var(--color-text-secondary); text-align: center; margin-top: 10px; line-height: 1.4; }
+  html, body {
+    margin: 0; padding: 0; height: 100%;
+    background: #f0eee9;
+    font-family: "DM Sans", system-ui, sans-serif;
+    color: #29261b;
+    -webkit-font-smoothing: antialiased;
+  }
+  #root { height: 100vh; }
 </style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+<div id="root"></div>
 
-<h2 class="sr-only">Couch Cushion safe-to-spend feature with mid-century couch header, three savings options, purple confirm button, and updated disclosures</h2>
+<script type="text/babel" src="shared.jsx"></script>
+<script type="text/babel" src="ios-frame.jsx"></script>
+<script type="text/babel" src="design-canvas.jsx"></script>
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel" src="flow.jsx"></script>
+<script type="text/babel" src="safe.jsx"></script>
+<script type="text/babel" src="bold.jsx"></script>
 
-<div style="padding: 1rem 0;">
-<div class="phone">
-<div class="screen">
+<script type="text/babel">
+const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+  "surplus": 115,
+  "showWorstCase": true,
+  "volatility": 1.1
+}/*EDITMODE-END*/;
 
-  <div class="hdr">
-    <div class="hdr-text">
-      <div class="hdr-row">
-        <span class="hdr-name">Hi, Rebecca</span>
-        <i class="ti ti-bell" style="font-size:16px;color:white;opacity:0.7;position:relative;z-index:2;" aria-hidden="true"></i>
-      </div>
-      <div class="hdr-bal">$847.23</div>
-      <div class="hdr-sub">checking balance</div>
-    </div>
-    <div class="couch-wrap">
-      <svg viewBox="0 0 312 80" xmlns="http://www.w3.org/2000/svg" width="100%" preserveAspectRatio="xMidYMax meet">
-        <rect x="0" y="50" width="312" height="30" fill="#0F3D2A"/>
-        <rect x="18" y="38" width="276" height="28" rx="6" fill="#155C38"/>
-        <rect x="18" y="28" width="60" height="38" rx="6" fill="#1A6B42"/>
-        <rect x="234" y="28" width="60" height="38" rx="6" fill="#1A6B42"/>
-        <rect x="85" y="32" width="60" height="26" rx="4" fill="#1D7A4A"/>
-        <rect x="167" y="32" width="60" height="26" rx="4" fill="#1D7A4A"/>
-        <rect x="148" y="30" width="4" height="30" rx="2" fill="#0F3D2A"/>
-        <rect x="26" y="54" width="12" height="14" rx="3" fill="#0D3325"/>
-        <rect x="274" y="54" width="12" height="14" rx="3" fill="#0D3325"/>
-        <rect x="90" y="54" width="12" height="14" rx="3" fill="#0D3325"/>
-        <rect x="210" y="54" width="12" height="14" rx="3" fill="#0D3325"/>
-        <g transform="translate(108, 10) rotate(-15)">
-          <rect x="0" y="0" width="16" height="28" rx="2" fill="#2D7A3A"/>
-          <rect x="1" y="1" width="14" height="26" rx="1" fill="#3A9648"/>
-          <text x="8" y="16" text-anchor="middle" font-size="8" font-weight="500" fill="#1B4F3A">$</text>
-          <rect x="0" y="6" width="16" height="1" fill="#1D5C28"/>
-          <rect x="0" y="20" width="16" height="1" fill="#1D5C28"/>
-        </g>
-        <g transform="translate(170, 8) rotate(10)">
-          <rect x="0" y="0" width="16" height="28" rx="2" fill="#2D7A3A"/>
-          <rect x="1" y="1" width="14" height="26" rx="1" fill="#3A9648"/>
-          <text x="8" y="16" text-anchor="middle" font-size="8" font-weight="500" fill="#1B4F3A">$</text>
-          <rect x="0" y="6" width="16" height="1" fill="#1D5C28"/>
-          <rect x="0" y="20" width="16" height="1" fill="#1D5C28"/>
-        </g>
-        <g transform="translate(138, 12) rotate(-5)">
-          <rect x="0" y="0" width="16" height="28" rx="2" fill="#2D7A3A"/>
-          <rect x="1" y="1" width="14" height="26" rx="1" fill="#3A9648"/>
-          <text x="8" y="16" text-anchor="middle" font-size="8" font-weight="500" fill="#1B4F3A">$</text>
-          <rect x="0" y="6" width="16" height="1" fill="#1D5C28"/>
-          <rect x="0" y="20" width="16" height="1" fill="#1D5C28"/>
-        </g>
-        <g transform="translate(54, 14) rotate(8)">
-          <rect x="0" y="0" width="14" height="24" rx="2" fill="#2D7A3A"/>
-          <rect x="1" y="1" width="12" height="22" rx="1" fill="#3A9648"/>
-          <text x="7" y="14" text-anchor="middle" font-size="7" font-weight="500" fill="#1B4F3A">$</text>
-        </g>
-        <g transform="translate(240, 15) rotate(-8)">
-          <rect x="0" y="0" width="14" height="24" rx="2" fill="#2D7A3A"/>
-          <rect x="1" y="1" width="12" height="22" rx="1" fill="#3A9648"/>
-          <text x="7" y="14" text-anchor="middle" font-size="7" font-weight="500" fill="#1B4F3A">$</text>
-        </g>
-      </svg>
-    </div>
-  </div>
+function App() {
+  const [t, setTweak] = useTweaks(TWEAK_DEFAULTS);
 
-  <div class="jade-banner">
-    <i class="ti ti-bulb jade-icon" aria-hidden="true"></i>
-    <div>
-      <div class="jade-msg">Jade spotted an opportunity</div>
-      <div class="jade-amt" id="safe-display">$47.00</div>
-      <div class="jade-msg">is safe to move after your bills and spending this week. What would you like to do with it?</div>
-    </div>
-  </div>
+  // Re-init Lucide on every render so new <i data-lucide> nodes get materialized.
+  React.useEffect(() => {
+    if (window.lucide) {
+      window.lucide.createIcons({ attrs: { 'stroke-width': '2.75', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' } });
+    }
+  });
 
-  <div class="body">
+  return (
+    <>
+      <DesignCanvas>
+        <DCSection id="couch-cushion" title="Couch Cushion by Kelby Nardoni"
+          subtitle="Two visual treatments of the same flow. Both interactive — drag the allocator, accept the AI rec, walk through to confirm + goal setup.">
+          <DCArtboard id="safe" label="A · Safe — cream, soft, AI-led" width={402} height={874}>
+            <SafeFlow surplus={t.surplus} showWorstCase={t.showWorstCase} volatility={t.volatility} />
+          </DCArtboard>
+          <DCArtboard id="bold" label="B · Bold — dark, data-forward, bars" width={402} height={874}>
+            <BoldFlow surplus={t.surplus} showWorstCase={t.showWorstCase} volatility={t.volatility} />
+          </DCArtboard>
+        </DCSection>
+      </DesignCanvas>
 
-    <div style="margin-bottom: 12px;">
-      <div class="section-label">adjust amount</div>
-      <input type="range" class="amount-slider" id="amount-slider" min="5" max="47" value="47" step="1">
-      <div class="slider-row"><span>$5 min</span><span id="slider-val" style="font-weight:500;color:var(--color-text-primary);">$47</span><span>$47 max</span></div>
-    </div>
+      <TweaksPanel title="Tweaks">
+        <TweakSection label="Scenario" />
+        <TweakSlider label="Surplus" value={t.surplus} min={5} max={500} step={5} unit="$"
+          onChange={(v) => setTweak('surplus', v)} />
+        <TweakSection label="Risk treatment" />
+        <TweakToggle label="Show worst-case band" value={t.showWorstCase}
+          onChange={(v) => setTweak('showWorstCase', v)} />
+        <TweakSlider label="S&P volatility" value={Math.round(t.volatility * 10) / 10}
+          min={0.5} max={2.0} step={0.1} unit="×"
+          onChange={(v) => setTweak('volatility', v)} />
+      </TweaksPanel>
+    </>
+  );
+}
 
-    <div class="section-label">choose what to do</div>
-
-    <div class="option-card" id="card-checking" onclick="selectOption('checking')">
-      <div class="option-header">
-        <i class="ti ti-building-bank option-icon" aria-hidden="true"></i>
-        <span class="option-title">Keep in checking</span>
-        <span class="option-badge badge-gray">0% APY</span>
-      </div>
-      <div class="proj-row">
-        <div class="proj-box">
-          <div class="proj-label">6 months</div>
-          <div class="proj-val" id="chk-6m">$47.00</div>
-          <div class="proj-gain" style="color:var(--color-text-secondary);">no growth</div>
-        </div>
-        <div class="proj-box">
-          <div class="proj-label">1 year</div>
-          <div class="proj-val" id="chk-1y">$47.00</div>
-          <div class="proj-gain" style="color:var(--color-text-secondary);">no growth</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="option-card selected" id="card-hysa" onclick="selectOption('hysa')">
-      <div class="option-header">
-        <i class="ti ti-sofa option-icon" aria-hidden="true"></i>
-        <span class="option-title">Stuff a cushion</span>
-        <span class="option-badge badge-green">4.1% APY</span>
-      </div>
-      <div class="cushion-input-row">
-        <label>name it</label>
-        <input type="text" id="cushion-name" placeholder="graduation trip" value="graduation trip">
-      </div>
-      <div class="proj-row">
-        <div class="proj-box">
-          <div class="proj-label">6 months</div>
-          <div class="proj-val" id="hysa-6m">$47.96</div>
-          <div class="proj-gain" id="hysa-6m-gain">+$0.96</div>
-        </div>
-        <div class="proj-box">
-          <div class="proj-label">1 year</div>
-          <div class="proj-val" id="hysa-1y">$48.93</div>
-          <div class="proj-gain" id="hysa-1y-gain">+$1.93</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="option-card" id="card-invest" onclick="selectOption('invest')">
-      <div class="option-header">
-        <i class="ti ti-trending-up option-icon" aria-hidden="true"></i>
-        <span class="option-title">Invest it</span>
-        <span class="option-badge badge-blue">S&P 500 avg</span>
-      </div>
-      <div class="proj-row">
-        <div class="proj-box">
-          <div class="proj-label">6 months</div>
-          <div class="proj-val" id="inv-6m">$48.61</div>
-          <div class="proj-gain" id="inv-6m-gain">+$1.61</div>
-        </div>
-        <div class="proj-box">
-          <div class="proj-label">1 year</div>
-          <div class="proj-val" id="inv-1y">$50.24</div>
-          <div class="proj-gain" id="inv-1y-gain">+$3.24</div>
-        </div>
-      </div>
-      <div style="font-size:10px;color:var(--color-text-secondary);margin-top:6px;">based on 6.9% historical avg · returns not guaranteed</div>
-    </div>
-
-    <button class="confirm-btn" onclick="sendPrompt('Rebecca confirmed her Couch Cushion choice — what happens next? ↗')">Confirm my choice ↗</button>
-
-    <div class="disclaimer">Jade will never move money without your consent. Once funds are invested, standard taxes and fees may apply to move invested funds back into your account.</div>
-
-  </div>
-</div>
-</div>
-<p style="text-align:center;font-size:11px;color:var(--color-text-secondary);margin-top:10px;">couch cushion · safe to spend · chime concept</p>
-</div>
-
-<script>
-  let selected = 'hysa';
-  function selectOption(opt) {
-    selected = opt;
-    ['checking','hysa','invest'].forEach(o => {
-      const c = document.getElementById('card-' + o);
-      c.classList.remove('selected');
-      c.style.border = '0.5px solid var(--color-border-tertiary)';
-    });
-    const el = document.getElementById('card-' + opt);
-    el.classList.add('selected');
-    el.style.border = '2px solid #1B4F3A';
-  }
-  function calcAndRender() {
-    const amt = parseFloat(document.getElementById('amount-slider').value);
-    document.getElementById('safe-display').textContent = '$' + amt.toFixed(2);
-    document.getElementById('slider-val').textContent = '$' + amt;
-    const hysa6 = amt * Math.pow(1 + 0.041/12, 6);
-    const hysa1 = amt * Math.pow(1 + 0.041/12, 12);
-    const inv6 = amt * Math.pow(1 + 0.069/12, 6);
-    const inv1 = amt * Math.pow(1 + 0.069/12, 12);
-    document.getElementById('chk-6m').textContent = '$' + amt.toFixed(2);
-    document.getElementById('chk-1y').textContent = '$' + amt.toFixed(2);
-    document.getElementById('hysa-6m').textContent = '$' + hysa6.toFixed(2);
-    document.getElementById('hysa-1y').textContent = '$' + hysa1.toFixed(2);
-    document.getElementById('hysa-6m-gain').textContent = '+$' + (hysa6 - amt).toFixed(2);
-    document.getElementById('hysa-1y-gain').textContent = '+$' + (hysa1 - amt).toFixed(2);
-    document.getElementById('inv-6m').textContent = '$' + inv6.toFixed(2);
-    document.getElementById('inv-1y').textContent = '$' + inv1.toFixed(2);
-    document.getElementById('inv-6m-gain').textContent = '+$' + (inv6 - amt).toFixed(2);
-    document.getElementById('inv-1y-gain').textContent = '+$' + (inv1 - amt).toFixed(2);
-  }
-  document.getElementById('amount-slider').addEventListener('input', calcAndRender);
-  document.getElementById('cushion-name').addEventListener('input', function() {});
-  selectOption('hysa');
-  calcAndRender();
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
 </script>
+
+</body>
+</html>
