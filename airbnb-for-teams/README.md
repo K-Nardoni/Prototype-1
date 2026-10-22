@@ -2,7 +2,7 @@
 
 A native mobile prototype for a corporate team event booking experience built on top of Airbnb's existing inventory and infrastructure.
 
-**[View the live prototype →](https://k-nardoni.github.io/prototypes/airbnb-for-teams/)**
+**[View the live prototype →](https://k-nardoni.github.io/Prototypes/airbnb-for-teams/)**
 
 ---
 
