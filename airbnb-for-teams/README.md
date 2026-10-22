@@ -75,4 +75,4 @@ vendor/             React 18.3.1, ReactDOM, Babel standalone, Lucide
 
 ## Author
  
-Kelby Nardoni — MBA, 9+ years building enterprise AI products for consumers and businesses.
+Kelby Nardoni — AI Product Manager with 9+ years building enterprise and consumer GenAI products in regulated financial services. Has led AI products from 6-person teams to 25M+ users and 1B+ interactions.
