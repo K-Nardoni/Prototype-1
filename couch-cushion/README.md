@@ -67,13 +67,13 @@ screenshots/              Process captures from design iteration
 
 ---
 
-## Measuring
+## If this shipped
 
 ```
-If built: success would be measured by cushion-creation rate, goal-completion rate, and retention lift , with guardrails on ensuring users never over-allocate below their safe-to-spend threshold.
+Success would be measured by cushion-creation rate, goal-completion rate, and D30 retention lift — with guardrails ensuring Couch Cushion never allocates below a user's genuine safe-to-spend threshold. The core design challenge is trust: making an AI assistant dependable enough that people will let it move their money.
 ```
 ---
 
 ## Author
 
-Kelby Nardoni, AI Product Manager with 9+ years building enterprise and consumer GenAI products in regulated financial services. Led AI products from 6-person teams to 25M+ users.
+Kelby Nardoni — AI Product Manager with 9+ years building enterprise and consumer GenAI products in regulated financial services. Has led AI products from 6-person teams to 25M+ users and 1B+ interactions.
